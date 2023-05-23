@@ -1,6 +1,7 @@
 import {Dimensions, Image, ImageBackground, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {header, logo} from '../../assets';
+import Balance from '../../components/Balance';
 
 const Home = () => {
   return (
@@ -8,10 +9,11 @@ const Home = () => {
       <ImageBackground source={header} style={styles.header}>
         <Image source={logo} style={styles.logo} />
         <View style={styles.welcomeContainer}>
-          <Text style={styles.welcomeText}>Selamat Datang, </Text>
+          <Text style={styles.welcomeText}>Welcome, </Text>
           <Text style={styles.username}>refaldybagas</Text>
         </View>
       </ImageBackground>
+      <Balance />
     </View>
   );
 };
@@ -24,7 +26,6 @@ const windowHeight = Dimensions.get('window').height;
 const styles = StyleSheet.create({
   homeWrapper: {
     flex: 1,
-    alignItems: 'center',
   },
   header: {
     width: windowWidth,
