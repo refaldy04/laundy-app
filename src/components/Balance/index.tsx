@@ -18,8 +18,8 @@ const Balance = () => {
       </View>
 
       <View style={styles.actionButtons}>
-        <ButtonIcon title={'Add Saldo'} />
-        <ButtonIcon title={'Add Point'} />
+        <ButtonIcon title={'Add Saldo'} type="balance" />
+        <ButtonIcon title={'Add Point'} type="balance" />
       </View>
     </View>
   );
@@ -27,13 +27,13 @@ const Balance = () => {
 
 export default Balance;
 
-const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
 const styles = StyleSheet.create({
   container: {
     backgroundColor: 'white',
     padding: 15,
+    paddingBottom: 5,
     marginHorizontal: 25,
     borderRadius: 10,
     shadowColor: '#000',

@@ -10,7 +10,7 @@ interface TabItemProps {
   label: string;
 }
 
-const styling = (isFocused: boolean) =>
+const conditionalstyling = (isFocused: boolean) =>
   StyleSheet.create({
     text: {
       fontSize: 13,
@@ -27,7 +27,7 @@ const TabItem: React.FC<TabItemProps> = ({isFocused, onPress, onLongPress, label
     return <HomeActive />;
   };
 
-  const textStyle = styling(isFocused);
+  const textStyle = conditionalstyling(isFocused);
   return (
     <TouchableOpacity
       accessibilityState={isFocused ? {selected: true} : {}}
