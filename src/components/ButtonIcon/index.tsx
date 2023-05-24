@@ -22,13 +22,27 @@ const conditionalstyling = (type: string) =>
 
 const ButtonIcon = ({title, type}: ButtonIconProps) => {
   const Icon = () => {
-    if (title === 'Add Saldo') return <Cash />;
-    if (title === 'By Weight') return <Scale />;
-    if (title === 'By Item') return <Clothes />;
-    if (title === 'VIP') return <Dress />;
-    if (title === 'Carpet') return <Laundry />;
-    if (title === 'Ironing Only') return <Iron />;
-    if (title === 'Express') return <Truck />;
+    if (title === 'Add Saldo') {
+      return <Cash />;
+    }
+    if (title === 'By Weight') {
+      return <Scale />;
+    }
+    if (title === 'By Item') {
+      return <Clothes />;
+    }
+    if (title === 'VIP') {
+      return <Dress />;
+    }
+    if (title === 'Carpet') {
+      return <Laundry />;
+    }
+    if (title === 'Ironing Only') {
+      return <Iron />;
+    }
+    if (title === 'Express') {
+      return <Truck />;
+    }
     return <Point />;
   };
 

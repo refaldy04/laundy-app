@@ -1,4 +1,4 @@
-import {StyleSheet, Text, TextStyle, TouchableOpacity, View} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {HomeActive, HomeNotActive, OrdersActive, OrdersNotActive, AccountActive, AccountNotActive} from '../../assets';
 import {COLOR_PRIMARY, COLOR_SECONDARY} from '../../utils/constant';
@@ -21,9 +21,15 @@ const conditionalstyling = (isFocused: boolean) =>
 
 const TabItem: React.FC<TabItemProps> = ({isFocused, onPress, onLongPress, label}) => {
   const Item = () => {
-    if (label === 'Home') return isFocused ? <HomeActive /> : <HomeNotActive />;
-    if (label === 'Orders') return isFocused ? <OrdersActive /> : <OrdersNotActive />;
-    if (label === 'Account') return isFocused ? <AccountActive /> : <AccountNotActive />;
+    if (label === 'Home') {
+      return isFocused ? <HomeActive /> : <HomeNotActive />;
+    }
+    if (label === 'Orders') {
+      return isFocused ? <OrdersActive /> : <OrdersNotActive />;
+    }
+    if (label === 'Account') {
+      return isFocused ? <AccountActive /> : <AccountNotActive />;
+    }
     return <HomeActive />;
   };
 

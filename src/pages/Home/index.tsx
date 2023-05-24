@@ -32,9 +32,9 @@ const Home = () => {
         <View style={styles.activeOrders}>
           <Text style={styles.label}>Orders List</Text>
           <ActiveOrders orderId="Pesanan No. 0002142" status="Complete" />
-          <ActiveOrders orderId="Pesanan No. 0002142" status="Orders in Process" />
-          <ActiveOrders orderId="Pesanan No. 0002142" status="Complete" />
-          <ActiveOrders orderId="Pesanan No. 0002142" status="Orders in Process" />
+          <ActiveOrders orderId="Pesanan No. 0002141" status="Orders in Process" />
+          <ActiveOrders orderId="Pesanan No. 0002140" status="Complete" />
+          <ActiveOrders orderId="Pesanan No. 0002139" status="Orders in Process" />
         </View>
       </ScrollView>
     </View>

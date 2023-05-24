@@ -1,4 +1,4 @@
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import React from 'react';
 import {BottomTabBarProps} from '@react-navigation/bottom-tabs/src/types';
 import {CommonActions} from '@react-navigation/native';
@@ -8,8 +8,6 @@ const BottomNavigator = ({state, descriptors, navigation}: BottomTabBarProps) =>
   return (
     <View style={styles.BottomTabContainer}>
       {state.routes.map((route, index) => {
-        const {options} = descriptors[route.key];
-
         const isFocused = state.index === index;
 
         const onPress = () => {
